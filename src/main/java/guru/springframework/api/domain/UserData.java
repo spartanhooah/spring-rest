@@ -4,13 +4,12 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @RequiredArgsConstructor
-public class Name implements Serializable {
+public class UserData implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final String title;
-    private final String first;
-    private final String last;
+    private final List<User> data;
 }

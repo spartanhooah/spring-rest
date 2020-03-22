@@ -4,10 +4,13 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.validation.constraints.Email;
+import java.io.Serializable;
 
 @Data
 @RequiredArgsConstructor
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final String gender;
     private final Name name;
     private final Location location;

@@ -1,17 +1,18 @@
 package guru.springframework.api.domain;
 
-import com.sun.org.apache.xml.internal.security.algorithms.implementations.SignatureDSA.SHA256;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import sun.security.provider.MD5;
-import sun.security.provider.SHA;
+
+import java.io.Serializable;
 
 @Data
 @RequiredArgsConstructor
-public class Login {
+public class Login implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final String username;
     private final String password;
-    private final MD5 md5;
-    private final SHA sha;
-    private final SHA256 sha256;
+    private final String md5;
+    private final String sha;
+    private final String sha256;
 }
