@@ -1,28 +1,30 @@
 package guru.springframework.api.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final String gender;
-    private final Name name;
-    private final Location location;
+    private String gender;
+    private Name name;
+    private Location location;
 
     @Email
-    private final String email;
+    private String email;
 
-    private final Login login;
+    private Login login;
 
-    private final String phone;
-    private final Job job;
-    private final Billing billing;
-    private final String language;
-    private final String currency;
+    private String phone;
+    private Job job;
+    private Billing billing;
+    private String language;
+    private String currency;
 }

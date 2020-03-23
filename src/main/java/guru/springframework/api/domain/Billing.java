@@ -1,16 +1,18 @@
 package guru.springframework.api.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Billing implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final Card card;
-    private final String iban;
-    private final String swift;
+    private Card card;
+    private String iban;
+    private String swift;
 }

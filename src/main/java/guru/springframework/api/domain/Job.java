@@ -1,15 +1,17 @@
 package guru.springframework.api.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Job implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final String title;
-    private final String company;
+    private String title;
+    private String company;
 }

@@ -25,8 +25,8 @@ public class ApiServiceImplTest {
 
     @Test
     public void getUsers() {
-        List<User> users = apiService.getUsers(3);
+        List<User> users = apiService.getUsers(1);
 
-        assertThat(users.size(), is(3));
+        assertThat(users.size(), is(1));
     }
 }

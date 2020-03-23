@@ -1,18 +1,20 @@
 package guru.springframework.api.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Login implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final String username;
-    private final String password;
-    private final String md5;
-    private final String sha;
-    private final String sha256;
+    private String username;
+    private String password;
+    private String md5;
+    private String sha;
+    private String sha256;
 }
