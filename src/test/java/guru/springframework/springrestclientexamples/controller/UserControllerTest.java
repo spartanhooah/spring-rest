@@ -37,7 +37,7 @@ public class UserControllerTest {
         MultiValueMap<String, String> formData = new LinkedMultiValueMap<>();
         formData.add("limit", "1");
 
-        webTestClient.post().uri("users")
+        webTestClient.post().uri("/users")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .body(BodyInserters.fromFormData(formData))
                 .exchange()
